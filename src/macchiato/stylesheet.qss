@@ -208,8 +208,12 @@ QListView::item:hover {
   background-color: #363a4f;
 }
 
-QListView::item:selected:active {
+QListView::item:selected {
   background-color: #494d64;
+}
+
+QListView::item:selected:active {
+  background-color: #5b6078;
 }
 
 /* Abstract item view */
@@ -257,14 +261,39 @@ QHeaderView::section:hover {
 /* TreeView */
 QTreeView {
   background-color: #1e2030;
+  outline: none;
 }
 
 QTreeView::item {
-  padding: 2px;
+  border-radius: 0;
+  padding: 2px 4px;
 }
 
-QTreeView::item:hover, QTreeView::item:selected {
+QTreeView::item:only-one {
+  border-radius: 4px;
+}
+
+QTreeView::item:first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+QTreeView::item:last {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+QTreeView::item:hover,
+QTreeView::item:selected {
   background-color: #363a4f;
+}
+
+QTreeView::item:selected:only-one {
+  background-color: #494d64;
+}
+
+QTreeView::item:selected:active {
+  background-color: #5b6078;
 }
 
 QTreeView QScrollBar:horizontal, QTreeView QScrollBar:vertical {
