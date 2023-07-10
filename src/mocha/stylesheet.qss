@@ -97,7 +97,8 @@ QStatusBar::item {
   padding: 4px;
 }
 
-QStatusBar QPushButton, QStatusBar QPushButton:active {
+QStatusBar QPushButton {
+  min-width: 0;
   background-color: transparent;
 }
 
