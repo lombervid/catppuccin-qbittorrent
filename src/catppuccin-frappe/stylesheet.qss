@@ -204,14 +204,15 @@ QListView {
 
 QListView::item {
   border-radius: 4px;
-  padding: 4px;
+  padding: 0 4px;
+  margin: 1px 0;
 }
 
 QListView::item:hover {
   background-color: #414559;
 }
 
-QListView::item:selected:active {
+QListView::item:selected, QListView::item:selected:active {
   background-color: #51576d;
 }
 
@@ -263,10 +264,17 @@ QHeaderView::section:hover {
 /* Weirdly seems to be the main area where you can see your transfers */
 QTreeView {
   background-color: #292c3c;
+  outline: none;
 }
 
 QTreeView::item {
   background-color: #292c3c;
+}
+
+/* Sidebar categories/trackers */
+QTreeView::item:only-one {
+  margin: 1px 0;
+  border-radius: 2px;
 }
 
 QTreeView::item:hover, QTreeView::item:selected {
