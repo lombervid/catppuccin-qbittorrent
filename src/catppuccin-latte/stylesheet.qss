@@ -271,6 +271,22 @@ QTreeView::item {
   background-color: #e6e9ef;
 }
 
+/* Striped rows */
+QTreeView::item:alternate {
+  background-color: #eff1f5;
+}
+
+/* Round corners of the row */
+QTreeView::item:first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+QTreeView::item:last {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
 /* Sidebar categories/trackers */
 QTreeView::item:only-one {
   margin: 1px 0;
